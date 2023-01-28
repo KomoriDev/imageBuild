@@ -1,0 +1,45 @@
+from setuptools import find_packages, setup
+import os
+path = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(path, "README.md"), "r", encoding="utf-8") as f:
+    long_description = f.read()
+    setup(name='imageBuild',
+            version='0.2.5',
+            description='使用超分辨率来对图像进行重建',
+            long_description=long_description,
+            long_description_content_type="text/markdown",
+            author='mute.',
+            author_email='mute23@qq.com',
+            url='https://github.com/mute23-code/imageBuild',
+            include_package_data=True,
+            install_requires=[
+                "torch",
+                "numpy",
+                "opencv-python-headless",
+                "setuptools",
+                "Pillow",
+                "gradio",
+                "torchvision",
+                "addict",
+                "future",
+                "lmdb",
+                "pyyaml",
+                "requests",
+                "scikit-image",
+                "scipy",
+                "tb-nightly",
+                "tqdm",
+                "yapf",
+                "psutil",
+            ],
+            license='BSD-3-Clause License',
+            packages=find_packages(),
+            platforms=["all"],
+            classifiers=['Intended Audience :: Developers',
+                        'Operating System :: OS Independent',
+                        'Natural Language :: Chinese (Simplified)',
+                        'Programming Language :: Python',
+                        'Programming Language :: Python :: 3.7',
+                        'Topic :: Software Development :: Libraries'
+                    ],
+        )
